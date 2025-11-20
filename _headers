@@ -1,6 +1,6 @@
 /*
-  X-Powered-By: My-Custom-Server/1.2.3
-  Server: FakeApache/2.4.51
-  X-CMS: TestCMS-v3
+  X-Powered-By: Erebus-FakeServer/1.0
+  Server: FakeApache/2.4.99
+  X-CMS: ErebusCMS-Dev
 /admin/*
   X-Admin-Header: AdminPanel
