@@ -1,4 +1,4 @@
-// site/js/emails.js - versión robusta
+// js/emails.js - versión robusta
 // Decodifica Base64, construye por concatenación y decodifica ROT13.
 // Espera a DOMContentLoaded y evita errores si faltan elementos.
 
