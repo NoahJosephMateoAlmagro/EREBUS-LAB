@@ -1,0 +1,6 @@
+/*
+  X-Powered-By: My-Custom-Server/1.2.3
+  Server: FakeApache/2.4.51
+  X-CMS: TestCMS-v3
+/admin/*
+  X-Admin-Header: AdminPanel
