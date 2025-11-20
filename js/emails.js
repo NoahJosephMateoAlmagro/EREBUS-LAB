@@ -1,7 +1,5 @@
-// emails.js - decodifica 3 patrones distintos y escribe en los elementos del DOM.
-// 1) Base64 en el contenido del elemento #b64
-// 2) Concatenación (simula partes separadas en variables)
-// 3) ROT13
+// emails.js - contiene emails ofuscados (base64 + concatenación)
+document.getElementById('js-email').innerText = atob('c2VjdXJpdHlAZXJlYnVzLmVz'); // security@erebus.es (base64)
 
 (function(){
   // Helper rot13
