@@ -1,2 +1,2 @@
-// emails.js - contiene emails dentro del script
-document.getElementById('js-email').innerText = atob('c2VjdXJpdHlAdGVzdC5leGFtcGxl'); // "security@test.example" en base64
+// emails.js - contiene emails ofuscados (base64 + concatenación)
+document.getElementById('js-email').innerText = atob('c2VjdXJpdHlAZXJlYnVzLmVz'); // security@erebus.es (base64)
