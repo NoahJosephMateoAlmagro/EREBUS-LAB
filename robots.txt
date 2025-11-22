@@ -1,3 +1,7 @@
+# robots.txt para EREBUS Lab — prueba controlada
 User-agent: *
 Disallow: /secret-page.html
 Disallow: /admin/
+Allow: /pdfs/
+Allow: /images/
+Sitemap: https://noahjosephmateoalmagro.github.io/EREBUS-LAB/sitemap.xml

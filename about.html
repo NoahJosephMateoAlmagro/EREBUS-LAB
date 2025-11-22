@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EREBUS Lab — About & Runbook</title>
+  <meta name="author" content="Noah Joseph Mateo Almagro" />
+  <meta name="description" content="EREBUS — documentación breve del laboratorio de pruebas: objetivos, metodología, cómo reproducir las pruebas y contactos de control." />
+  <style>
+    body{font-family:system-ui,Arial,Helvetica,sans-serif;margin:20px;color:#0f1720;background:#fff}
+    header{border-left:4px solid #0b5fff;padding-left:12px;margin-bottom:18px}
+    h1{margin:0 0 6px 0;font-size:1.6rem}
+    section{margin-bottom:14px;padding:12px;border-radius:8px;background:#fbfcfe;border:1px solid #eef2ff}
+    .meta{font-size:0.9rem;color:#445}
+    .code{font-family:monospace;background:#f6f8fa;padding:6px;border-radius:6px;display:block}
+    footer{font-size:0.85rem;color:#667}
+    .badge{display:inline-block;padding:4px 8px;background:#eef8ff;border-radius:6px;margin-right:6px;font-size:0.85rem}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>EREBUS — Laboratorio de pruebas (About / Runbook)</h1>
+    <p class="meta">Autor: Noah J. M. • Director: Juan Martín Mansilla • Fecha: 29/10/2025</p>
+  </header>
+
+  <section id="project">
+    <div class="badge">TFG: EREBUS</div>
+    <h2>Descripción breve</h2>
+    <p>EREBUS.ES es un dominio de pruebas diseñado para evaluar herramientas de footprinting pasivo: descubrimiento de subdominios, extracción de correos desde HTML/JS/PDF/EXIF, detección de tecnología a partir de cabeceras y evaluación del respeto a <code>robots.txt</code> y <code>sitemap.xml</code>.</p>
+  </section>
+
+  <section id="objectives">
+    <h2>Objetivos de este laboratorio</h2>
+    <ul>
+      <li>Probar extracción de direcciones en distintas ubicaciones (HTML visible, JavaScript, PDFs y EXIF).</li>
+      <li>Evaluar comportamiento ante reglas catch-all y redirecciones.</li>
+      <li>Medir normalización y deduplicado frente a variantes (mayúsculas, trailing-dots, obfuscaciones).</li>
+    </ul>
+  </section>
+
+
+  <section id="evidence-and-files">
+    <h2>Ficheros relevantes</h2>
+    <ul>
+      <li>PDFs de prueba: <a href="/pdfs/Doc-emails.pdf">/pdfs/Doc-emails.pdf</a> (emails embebidos).</li>
+      <li>Imágenes con EXIF: <a href="/images/Contact-Photo.jpg">/images/Contact-Photo.jpg</a> (metadatos con contacto de control).</li>
+      <li>Rutas sensibles (listadas en sitemap): <a href="/sitemap.xml">/sitemap.xml</a></li>
+      <li>Reglas de redirección: <code>_redirects</code> (catch-all + /pdfs/*)</li>
+    </ul>
+  </section>
+
+  <section id="hidden-hints">
+    <h2>Rutas ocultas / notas para pruebas</h2>
+    <!-- 
+      Nota de prueba: la ruta /secret-page.html existe en el entorno y está marcada en sitemap.
+      Herramientas que solo parseen enlaces visibles no la verán; herramientas que analicen comentarios/sitemap sí.
+    -->
+    <!-- HINT:SECRETPATH=/secret-page.html -->
+    <p class="small">El fichero <code>sitemap.xml</code> contiene rutas que algunas herramientas deberían leer (y otras ignorar).</p>
+  </section>
+
+  <footer>
+    <p class="meta">EREBUS Lab — entorno controlado para pruebas. No usar contra terceros sin permiso</p>
+  </footer>
+</body>
+</html>
